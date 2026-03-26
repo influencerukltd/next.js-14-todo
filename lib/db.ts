@@ -1,5 +1,6 @@
 import { neon } from '@neondatabase/serverless';
 
+// Database client using Neon serverless driver
 const sql = neon(process.env.DATABASE_URL!);
 
 // Type definitions based on Prisma schema
