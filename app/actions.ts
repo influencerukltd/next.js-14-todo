@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
-import { db } from '~/lib/db';
+import { db } from '~/lib/database';
 import { action } from '~/lib/safe-action';
 
 const doneSchema = z.object({

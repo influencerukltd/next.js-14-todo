@@ -1,4 +1,4 @@
-import { db } from '~/lib/db';
+import { db } from '~/lib/database';
 
 const getRepoMetadata = async (taskId: string) => {
   const repo = await db.repo.findUnique({

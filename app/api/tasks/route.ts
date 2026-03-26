@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 import { z } from 'zod';
 
 import { authOptions } from '~/lib/auth';
-import { db } from '~/lib/db';
+import { db } from '~/lib/database';
 
 const createTaskSchema = z.object({
   title: z.string(),

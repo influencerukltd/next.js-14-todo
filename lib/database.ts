@@ -194,6 +194,10 @@ export const db = {
     },
   },
   repo: {
+    findUnique: async ({ where }: { where: { taskId: string } }) => {
+      const result = await sql`SELECT "taskId", repo_name as "repoName", owner, full_name as "fullName" FROM gh_links WHERE "taskId" = ${where.taskId} LIMIT 1`;
+      return result[0] as Repo | undefined;
+    },
     upsert: async ({
       where,
       update,
