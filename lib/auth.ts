@@ -9,12 +9,12 @@ import { PAGES } from '~/lib/constants';
 export const authOptions = {
   session: {
     strategy: 'jwt',
-    maxAge: +process.env.NEXTAUTH_SECRET_EXPIRES_IN!
+    maxAge: +(process.env.NEXTAUTH_SECRET_EXPIRES_IN || 86400)
   },
   pages: {
     signIn: PAGES.SIGN_IN
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET || 'dev-secret-do-not-use-in-production',
   providers: [
     Credentials({
       name: 'Credentials provider',
