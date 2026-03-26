@@ -1,3 +1,4 @@
+// NextAuth API route handler
 import NextAuth from 'next-auth';
 
 import { authOptions } from '~/lib/auth';
