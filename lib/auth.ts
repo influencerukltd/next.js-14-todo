@@ -1,6 +1,6 @@
 import { type NextAuthOptions } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 
 import { db } from '~/lib/db';
 
