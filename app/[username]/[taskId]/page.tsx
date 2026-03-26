@@ -18,7 +18,7 @@ import { Comments } from '~/components/comments';
 import { Icons } from '~/components/icons';
 
 import { authOptions } from '~/lib/auth';
-import { db } from '~/lib/database';
+import { db } from '~/lib/db';
 import { formatDate } from '~/lib/utils';
 import { PAGES } from '~/lib/constants';
 

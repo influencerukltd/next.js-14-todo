@@ -1,20 +1,20 @@
 import { type NextAuthOptions } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-import bcrypt from 'bcryptjs';
+import * as bcrypt from 'bcrypt';
 
-import { db } from '~/lib/database';
+import { db } from '~/lib/db';
 
 import { PAGES } from '~/lib/constants';
 
 export const authOptions = {
   session: {
     strategy: 'jwt',
-    maxAge: +(process.env.NEXTAUTH_SECRET_EXPIRES_IN || 86400)
+    maxAge: +process.env.NEXTAUTH_SECRET_EXPIRES_IN!
   },
   pages: {
     signIn: PAGES.SIGN_IN
   },
-  secret: process.env.NEXTAUTH_SECRET || 'dev-secret-do-not-use-in-production',
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     Credentials({
       name: 'Credentials provider',

@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 import { z } from 'zod';
 
 import { authOptions } from '~/lib/auth';
-import { db } from '~/lib/database';
+import { db } from '~/lib/db';
 
 const routeContextSchema = z.object({
   params: z.object({

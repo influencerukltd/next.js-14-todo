@@ -1,6 +1,6 @@
-import * as bcrypt from 'bcryptjs';
+import * as bcrypt from 'bcrypt';
 
-import { db } from '~/lib/database';
+import { db } from '~/lib/db';
 
 export async function POST(request: Request) {
   try {

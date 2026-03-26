@@ -5,7 +5,7 @@ import { getServerSession } from 'next-auth';
 
 import { Separator } from '~/components/ui/separator';
 
-import { db } from '~/lib/database';
+import { db } from '~/lib/db';
 import { formatDate } from '~/lib/utils';
 import { authOptions } from '~/lib/auth';
 import { PAGES } from '~/lib/constants';
