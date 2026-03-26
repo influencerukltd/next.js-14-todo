@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 
+// Prisma client instance
 declare global {
   var cachedPrisma: PrismaClient;
 }
