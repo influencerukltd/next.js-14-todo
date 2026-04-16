@@ -20,7 +20,7 @@ export function Search() {
   const [isPending, startTransition] = useTransition();
 
   const debounced = useDebouncedCallback((searchInput: string) => {
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
 
     if (searchInput) {
       params.set(QUERY_NAME, searchInput);
